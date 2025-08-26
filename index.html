@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игра в пары</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <h1>Игра в пары</h1>
+        </header>
+
+        <div class="card-options">
+          <p class="section-title">Выбор карт</p>
+          <div class="options-row">
+            <button data-cards="12">12</button>
+            <button data-cards="16">16</button>
+            <button data-cards="20">20</button>
+            <button data-cards="20">24</button>
+          </div>
+        </div>
+
+        <button id="startBtn" class="start-btn">🚀 Начать игру</button>
+
+        <div class="status">
+          <p id="turn">Ход игрока 1</p>
+          <p>🕵️ Игрок 1: <span id="score1">0</span></p>
+          <p>🥷 Игрок 2: <span id="score2">0</span></p>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <div id="gameBoard" class="board"></div>
+      </main>
+    </div>
+  </body>
+</html>

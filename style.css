@@ -1,0 +1,125 @@
+:root {
+  --bg-color: #0d1117; /* общий фон */
+  --panel-color: #161b22; /* фон панелей */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-color: #e6edf3;
+  --accent-color: #58a6ff; /* голубой акцент */
+}
+
+body {
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- Сайдбар --- */
+.sidebar {
+  width: 260px;
+  background: var(--panel-color);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Хедер в сайдбаре --- */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-header h1::before {
+  content: "🎮"; /* можно заменить на SVG */
+  font-size: 20px;
+}
+
+/* --- Кнопки выбора --- */
+.section-title {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0.7;
+  text-align: center;
+}
+
+.options-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-options button,
+.start-btn {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  font-weight: 600;
+}
+
+.card-options button:hover,
+.start-btn:hover {
+  background: #1f6feb;
+  transform: translateY(-2px);
+}
+
+.start-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* --- Статус игры --- */
+.status {
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+.status p {
+  margin: 6px 0;
+}
+
+#score1,
+#score2 {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* --- Игровое поле --- */
+.main-area {
+  flex: 1;
+  background: var(--panel-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
