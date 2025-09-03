@@ -130,7 +130,6 @@ body {
 
 .board {
   display: grid;
-  grid-template-columns: repeat(5, 200px);
   align-items: center;
   justify-content: center;
   gap: 2em;
